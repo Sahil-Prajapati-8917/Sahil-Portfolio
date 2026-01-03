@@ -19,7 +19,7 @@ export default function Navbar() {
         {DATA.navbar.map((item) => (
           <DockIcon key={item.href}>
             <Tooltip>
-              <TooltipTrigger asChild>
+              <TooltipTrigger asChild> 
                 <Link
                   href={item.href}
                   className={cn(
