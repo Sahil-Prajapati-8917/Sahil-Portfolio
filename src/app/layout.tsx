@@ -21,6 +21,19 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   keywords: [
+    "Nishant Patel",
+    "Nishant-Portfolio",
+    "AiTodoCRM",
+    "Onboarding Screen React",
+    "Brand-CN",
+    "Project Management App",
+    "Prddiam",
+    "Divine Creation",
+    "Kasba Natural",
+    "NSM Roadways CRM",
+    "Nwallpaper",
+    "Earn4Day",
+    "Eco Scan",
     "Full Stack Developer",
     "React",
     "Next.js",
@@ -30,7 +43,6 @@ export const metadata: Metadata = {
     "Shopify",
     "Laravel",
     "Portfolio",
-    "Nishant Patel",
     "Web Development",
     "Software Engineer",
   ],
@@ -75,10 +87,6 @@ export const metadata: Metadata = {
       { rel: 'icon', url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
       { rel: 'icon', url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
-  },
-  verification: {
-    google: "", // Add your Google Search Console verification code here
-    yandex: "", // Add your Yandex verification code here
   },
   alternates: {
     canonical: DATA.url,
