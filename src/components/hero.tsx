@@ -30,7 +30,7 @@ export function Hero() {
                   transform: "translateY(-8px) translateZ(0px)",
                 }}
               >
-                Hi, I'm Sahil Prajapati 👋
+                Hi, I'm Sahil 👋
               </span>
             </div>
             <div className="flex">
