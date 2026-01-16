@@ -46,14 +46,84 @@ export function Hero() {
               </span>
             </div>
           </div>
-          <div className="mt-4 flex flex-col gap-2 text-base md:text-lg text-neutral-500">
-            <span>
-              I design, deploy, and manage secure, scalable cloud infrastructure.
-            </span>
-            <span>
-              I work with modern cloud and DevOps tools like AWS, Linux, Docker, Git, CI/CD pipelines, Nginx, and cloud storage services.
-            </span>
-          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-neutral-500 whitespace-pre-wrap">
+  <span>I work with modern Cloud and DevOps tools like</span>
+
+  {/* AWS */}
+  <a
+    target="_blank"
+    href="https://aws.amazon.com/"
+    className="inline-flex items-center gap-1.5 text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" className="h-4 w-4" />
+    <span className="font-bold">AWS</span>
+  </a>
+
+  <span>, </span>
+
+  {/* Linux */}
+  <a
+    target="_blank"
+    href="https://www.linux.org/"
+    className="inline-flex items-center gap-1.5 text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" className="h-4 w-4" />
+    <span className="font-bold">Linux</span>
+  </a>
+
+  <span>, </span>
+
+  {/* Docker */}
+  <a
+    target="_blank"
+    href="https://www.docker.com/"
+    className="inline-flex items-center gap-1.5 text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white"
+  >
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-4 w-4" />
+    <span className="font-bold">Docker</span>
+  </a>
+
+  <span>, </span>
+
+  {/* Git */}
+  <a
+    target="_blank"
+    href="https://git-scm.com/"
+    className="inline-flex items-center gap-1.5 text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white"
+  >
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="h-4 w-4" />
+    <span className="font-bold">Git</span>
+  </a>
+
+  <span>, </span>
+
+  {/* CI/CD */}
+  <a
+    target="_blank"
+    href="https://docs.github.com/en/actions"
+    className="inline-flex items-center gap-1.5 text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white"
+  >
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="CI/CD" className="h-4 w-4 dark:invert" />
+    <span className="font-bold">CI/CD Pipelines</span>
+  </a>
+
+  <span>and </span>
+
+  {/* Nginx */}
+  <a
+    target="_blank"
+    href="https://www.nginx.com/"
+    className="inline-flex items-center gap-1.5 text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg" alt="Nginx" className="h-4 w-4" />
+    <span className="font-bold">Nginx</span>
+  </a>
+
+  <span>
+    {""}I focus on building secure, scalable, production-ready infrastructure.
+  </span>
+</div>
+
         </div>
         <div className="mt-8 flex gap-4">
           <Button asChild>

@@ -13,12 +13,12 @@ const getSkillIcon = (skill: string, isDarkTheme: boolean) => {
   const skillLower = skill.toLowerCase();
 
   // Special AWS logic: use different icons based on theme
-  if (skillLower.includes('aws') || skillLower.includes('cloud') || skillLower.includes('ec2') || skillLower.includes('s3') || skillLower.includes('iam') || skillLower.includes('cloudwatch')) {
+  if (skillLower.includes('aws') || skillLower.includes('ec2') || skillLower.includes('s3') || skillLower.includes('iam') || skillLower.includes('cloudwatch')) {
     // Light theme: use Monitoring & Logging icon (cloud)
     // Dark theme: use original AWS logo
     return isDarkTheme ? (
       <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
         className="w-3 h-3"
         alt="AWS"
       />
@@ -42,11 +42,8 @@ const getSkillIcon = (skill: string, isDarkTheme: boolean) => {
   if (skillLower.includes('ci/cd') || skillLower.includes('jenkins')) {
     return <Icons.cicd className="w-3 h-3" />;
   }
-  if (skillLower.includes('virtual machines') || skillLower.includes('networking') || skillLower.includes('monitoring') || skillLower.includes('logging') || skillLower.includes('security') || skillLower.includes('cost')) {
+  if (skillLower.includes('monitoring') || skillLower.includes('logging') || skillLower.includes('security')) {
     return <Icons.cloud className="w-3 h-3" />;
-  }
-  if (skillLower.includes('domain') || skillLower.includes('dns') || skillLower.includes('ssl') || skillLower.includes('https')) {
-    return <Icons.globe className="w-3 h-3" />;
   }
 
   // Default fallback
