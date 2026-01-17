@@ -97,7 +97,6 @@ export const DATA = {
         {
             title: "CloudBox – Secure File Storage Platform",
             href: "https://cloudbox.sahilprajapati.me/",
-            dates: "2025",
             active: true,
             description:
                 "Built a secure file and folder upload system using AWS S3 signed URLs. Implemented JWT authentication, folder management, and metadata storage with MongoDB. Optimized for scalable, serverless deployments.",
@@ -130,7 +129,6 @@ export const DATA = {
         {
             title: "File Transfer & Folder Upload App",
             href: "#",
-            dates: "2024",
             active: true,
             description:
                 "Built a folder upload system with real-time progress indicators. Implemented folder-to-ZIP automation using JSZip. Integrated Firebase for secure file storage and optimized uploads.",
@@ -158,7 +156,6 @@ export const DATA = {
         },
         {
             title: "WhatsApp Bulk Messaging System",
-            href: "#",
             dates: "2024",
             active: true,
             description:
@@ -186,7 +183,6 @@ export const DATA = {
         {
             title: "Transport Management System",
             href: "https://nsmadmin.nsmroadways.com/",
-            dates: "2024",
             active: true,
             description:
                 "Designed mobile and desktop screens for admin and driver workflows. Covered dashboards, driver lists, load management, chat, and job assignment. Focused on simple navigation and clear user experience for logistics operations.",
@@ -206,7 +202,6 @@ export const DATA = {
         {
             title: "AI-Driven Holistic Resume Evaluation Platform",
             href: "#",
-            dates: "2024",
             active: true,
             description:
                 "Developed a full-stack AI-based hiring platform beyond keyword matching. Built intelligent resume parsing for PDF and DOC files. Implemented explainable AI scoring, audit trails, and JWT-based authentication.",
@@ -235,7 +230,6 @@ export const DATA = {
         {
             title: "Pixora – Interactive Digital Visual Books",
             href: "#",
-            dates: "2024",
             active: true,
             description:
                 "Built a full-stack platform for interactive digital visual books. Implemented smooth animations and page-flip effects. Designed authentication, dashboards, and project management features.",
