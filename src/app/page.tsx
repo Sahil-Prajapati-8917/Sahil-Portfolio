@@ -12,18 +12,13 @@ const BLUR_FADE_DELAY = 0.04;
 const getSkillIcon = (skill: string, isDarkTheme: boolean) => {
   const skillLower = skill.toLowerCase();
 
-  // Special AWS logic: use different icons based on theme
   if (skillLower.includes('aws') || skillLower.includes('ec2') || skillLower.includes('s3') || skillLower.includes('iam') || skillLower.includes('cloudwatch')) {
-    // Light theme: use Monitoring & Logging icon (cloud)
-    // Dark theme: use original AWS logo
-    return isDarkTheme ? (
+    return (
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
         className="w-3 h-3"
         alt="AWS"
       />
-    ) : (
-      <Icons.cloud className="w-3 h-3" />
     );
   }
 
@@ -42,8 +37,53 @@ const getSkillIcon = (skill: string, isDarkTheme: boolean) => {
   if (skillLower.includes('ci/cd') || skillLower.includes('jenkins')) {
     return <Icons.cicd className="w-3 h-3" />;
   }
-  if (skillLower.includes('monitoring') || skillLower.includes('logging') || skillLower.includes('security')) {
-    return <Icons.cloud className="w-3 h-3" />;
+  if (skillLower.includes('monitoring') || skillLower.includes('logging')) {
+    return (
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+        className="w-3 h-3"
+        alt="AWS"
+      />
+    );
+  }
+  if (skillLower.includes('cloud security basics')) {
+    return (
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+        className="w-3 h-3"
+        alt="AWS"
+      />
+    );
+  }
+  if (skillLower.includes('prometheus')) {
+    return <Icons.prometheus className="w-3 h-3" />;
+  }
+  if (skillLower.includes('grafana')) {
+    return <Icons.grafana className="w-3 h-3" />;
+  }
+  if (skillLower.includes('node')) {
+    return <Icons.nodejs className="w-3 h-3" />;
+  }
+  if (skillLower.includes('express')) {
+    return <Icons.express className="w-3 h-3" />;
+  }
+  if (skillLower.includes('mongodb') || skillLower.includes('mongo')) {
+    return <Icons.mongodb className="w-3 h-3" />;
+  }
+  if (skillLower.includes('firebase')) {
+    return <Icons.firebase className="w-3 h-3" />;
+  }
+  if (skillLower.includes('javascript') || skillLower.includes('js')) {
+    return <Icons.javascript className="w-3 h-3" />;
+  }
+  if (skillLower.includes('react')) {
+    return <Icons.react className="w-3 h-3" />;
+  }
+  if (skillLower.includes('tailwind')) {
+    return <Icons.tailwind className="w-3 h-3" />;
+  }
+  if (skillLower.includes('python')) {
+    return <Icons.python className="w-3 h-3" />;
   }
 
   // Default fallback
@@ -73,16 +113,21 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill} className="flex items-center gap-1">
-                  {getSkillIcon(skill, isDarkTheme)}
-                  {skill}
-                </Badge>
-              </BlurFade>
-            ))}
-          </div>
+          {Object.entries(DATA.skillCategories).map(([category, skills], catId) => (
+            <div key={category} className="flex flex-col gap-2">
+              <h3 className="text-lg font-semibold">{category}</h3>
+              <div className="flex flex-wrap gap-1">
+                {skills.map((skill: string, id: number) => (
+                  <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + catId * 0.1 + id * 0.05}>
+                    <Badge className="flex items-center gap-1">
+                      {getSkillIcon(skill, isDarkTheme)}
+                      {skill}
+                    </Badge>
+                  </BlurFade>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -61,7 +61,7 @@ export default function Layout({ children }: LayoutProps) {
               "@type": "Occupation",
               name: "Cloud & DevOps Engineer",
               occupationalCategory: "Cloud Computing & DevOps",
-              skills: DATA.skills.join(", "),
+              skills: Object.values(DATA.skillCategories).flat().join(", "),
             },
             alumniOf: {
               "@type": "EducationalOrganization",
@@ -74,7 +74,7 @@ export default function Layout({ children }: LayoutProps) {
               startDate: company.start,
               endDate: company.end === "Present" ? undefined : company.end,
             })),
-            knowsAbout: DATA.skills,
+            knowsAbout: Object.values(DATA.skillCategories).flat(),
           })}
         </script>
       </Helmet>
